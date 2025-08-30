@@ -106,7 +106,7 @@ function calculateFillLevel(fillableHeight, sensorDistance, bufferHeight) {
     const fillLevelPercentage = ((fillableHeight - actualFillHeight) / fillableHeight) * 100
 
     // Ensure the value stays within 0 to 100 range
-    return Math.max(0, Math.min(100, fillLevelPercentage))
+    return Math.max(0, Math.min(100, fillLevelPercentage)).toFixed(2)
 }
 
 app.listen(port, () => {
